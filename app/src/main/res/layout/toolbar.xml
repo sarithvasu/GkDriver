@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_create_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/img_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/ic_dehaze_black_24dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.46"
+            android:padding="10dp"
+            android:text="@string/app_name"
+            android:textColor="@color/polygone"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight=".5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_logout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="right"
+                android:layout_weight="0.56"
+                android:gravity="right|bottom"
+                android:text="sumant"
+                android:textColor="@color/polygone"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_email_id"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:layout_marginBottom="5dp"
+                android:layout_weight=".5"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/polygone"
+        android:weightSum="1"
+        android:id="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/availablity3030"
+            android:text="@string/Availablity"
+            style="@style/menu"
+            android:id="@+id/tv_mTvAvailablity"
+            android:textAlignment="center"
+            android:layout_weight=".25"
+
+           />
+        <TextView
+            style="@style/menu"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/delivery3926"
+            android:text="@string/Delivery"
+            android:id="@+id/tv_mTvDelivery"
+            android:textAlignment="center"
+            android:layout_weight=".25"/>
+        <TextView
+            style="@style/menu"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/status3030"
+            android:text="@string/Status"
+            android:id="@+id/tv_mTvStatus"
+            android:textAlignment="center"
+            android:layout_weight=".25"/>
+        <TextView
+            style="@style/menu"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/orderhistory2428"
+            android:text="@string/orderHistory"
+            android:id="@+id/tv_mTvOrder"
+            android:textAlignment="center"
+            android:layout_weight=".25"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout2"
+        android:id="@+id/context_panel"
+        ></FrameLayout>
+</RelativeLayout>

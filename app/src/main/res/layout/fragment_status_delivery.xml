@@ -1,0 +1,127 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    tools:context="com.effone.gkdriver.fragments.Status_delivery">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/delivery_status"
+            style="@style/HeaderMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Deilvery" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/delivery_status"
+            android:layout_marginBottom="10dp"
+            android:background="@color/viewline" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/line1"
+            android:layout_margin="10dp">
+
+
+            <TextView
+                android:id="@+id/setStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/setStatus"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/setStatus"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_out_for_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/setStatus"
+                    android:layout_alignBottom="@+id/setStatus"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/green"
+                    android:paddingRight="10dp"
+                    android:text="@string/delivered"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_delivered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/rb_out_for_order"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/rb_out_for_order"
+                    android:layout_below="@+id/rb_out_for_order"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/green"
+                    android:paddingRight="10dp"
+                    android:text="@string/canceled"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+
+            <EditText
+                android:id="@+id/et_comments"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/radioGroup"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/edittext_rounded_corner"
+                android:gravity="top|left"
+                android:hint="@string/comments_status"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:lines="8"
+                android:maxHeight="150dp"
+                android:maxLength="500"
+                android:maxLines="6"
+                android:overScrollMode="always"
+                android:padding="5dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_rounded_corner"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

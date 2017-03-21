@@ -1,0 +1,81 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    tools:context="com.effone.gkdriver.fragments.AvailbilityFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/avalibailty"
+            style="@style/HeaderMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Availablity" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/avalibailty"
+            android:layout_marginBottom="10dp"
+            android:background="@color/viewline" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/loginPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/radioGroup"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/avalibailty"
+            android:layout_toLeftOf="@+id/radioGroup"
+            android:layout_toStartOf="@+id/radioGroup"
+            android:gravity="left"
+            android:text="@string/setavailbility"
+            android:textColor="@android:color/black" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/avalibailty"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/rb_yes"
+                style="@style/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/avalibailty"
+                android:layout_toLeftOf="@+id/radioGroup"
+                android:layout_toStartOf="@+id/radioGroup"
+                android:buttonTint="@color/green"
+                android:padding="15dp"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/rb_no"
+                style="@style/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/line1"
+                android:buttonTint="@color/green"
+                android:padding="15dp"
+                android:text="@string/no" />
+
+
+        </RadioGroup>
+
+    </RelativeLayout>
+</FrameLayout>

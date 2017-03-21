@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.effone.gkdriver.fragments.OrderHistoryFragment"
+    android:clickable="true"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/HeaderMain"
+        android:text="@string/order"
+        android:id="@+id/delivery_status"
+        />
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/viewline"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/line1"
+        android:layout_below="@+id/delivery_status"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_vert_black_24dp"
+            style="@style/HeaderMain"
+            android:layout_alignBottom="@+id/line1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/img_menu"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line1"
+        android:id="@+id/list_item"></ListView>
+    </RelativeLayout>
+</FrameLayout>
