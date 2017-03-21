@@ -10,7 +10,7 @@
     <string name="login">Login</string>
     <string name="logout">Logout</string>
     <string name="btn_sign_up">Sigin in</string>>
-    <string name="err_msg_email">Enterss valid email addresss</string>
+    <string name="err_msg_email">Enter valid email addresss</string>
     <string name="err_msg_password">Enter the password</string>
 
 
