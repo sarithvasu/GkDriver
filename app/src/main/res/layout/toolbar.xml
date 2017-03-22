@@ -3,6 +3,8 @@
     android:id="@+id/activity_create_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
     >
 
     <LinearLayout
