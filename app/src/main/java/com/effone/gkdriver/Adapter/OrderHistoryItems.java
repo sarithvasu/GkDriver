@@ -56,7 +56,7 @@ public class OrderHistoryItems  extends ArrayAdapter<OrderDetilas> {
 
             /************  Set Model values in Holder elements ***********/
 
-            holder.date.setText("Delivered   "+value.getDateofDelivery()+" "+ value.getTime());
+            holder.date.setText(value.getStatus());
             holder.saladname.setText(value.getItemName());
             holder.address.setText(value.getAddress());
             holder.addreess1.setText(value.getAddress2());

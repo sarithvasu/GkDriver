@@ -29,12 +29,14 @@ public class DBConstants {
     public final static String ORDER_ID = "order_id";
     public final static String CUSTOMER_NAME = "customer_name";
     public final static String ADDRESS = "address";
+    public final static String ADDRESS1 = "address1";
+    public final static  String SALAD="salad_name";
     public final static String PHONE_NUMBER = "phone_number";
     public final static String STATUS = "status";
     public final static String COMMENTS = "comments";
     public final static String DATE_TIME = "date_time";
 
-    public static final String CREATE_TABLE_ORDER_HISTORY = "CREATE TABLE  IF NOT EXISTS `" + ORDERHISTORY + "` (`" + ORDER_ID + "` REAL NOT NULL,`" + DRIVER_ID + "` REAL NOT NULL,`" + CUSTOMER_NAME + "` TEXT NOT NULL,`" + ADDRESS + "` TEXT NOT NULL,`" + PHONE_NUMBER + "` TEXT NOT NULL,`" + STATUS + "` TEXT NOT NULL,`" + COMMENTS + "` TEXT NOT NULL,`" + DATE_TIME + "` TEXT NOT NULL);";
+    public static final String CREATE_TABLE_ORDER_HISTORY = "CREATE TABLE  IF NOT EXISTS `" + ORDERHISTORY + "` (`" + ORDER_ID + "` REAL NOT NULL,`" + DRIVER_ID + "` REAL NOT NULL,`" + CUSTOMER_NAME + "` TEXT NOT NULL,`" + ADDRESS + "` TEXT NOT NULL,`" + ADDRESS1 + "` TEXT NOT NULL,`" + PHONE_NUMBER + "` TEXT NOT NULL,`" + STATUS + "` TEXT NOT NULL,`" + SALAD + "` TEXT NOT NULL,`" + COMMENTS + "` TEXT ,`" + DATE_TIME + "` TEXT );";
 
 
 }

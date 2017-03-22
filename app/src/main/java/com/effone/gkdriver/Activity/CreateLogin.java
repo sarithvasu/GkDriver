@@ -31,6 +31,7 @@ import com.effone.gkdriver.fragments.DeliveryDetailsFragment;
 import com.effone.gkdriver.fragments.ForgotPasswordFragment;
 import com.effone.gkdriver.fragments.MapsFragment;
 import com.effone.gkdriver.fragments.OrderHistoryFragment;
+import com.effone.gkdriver.fragments.Out_For_Delivery;
 import com.effone.gkdriver.fragments.ResetPasswordFragment;
 import com.effone.gkdriver.fragments.Status_delivery;
 
@@ -259,9 +260,7 @@ public class CreateLogin extends AppCompatActivity implements OnClickListener, R
                 visible_invisible(1);
                 keyboardhidden();
                 break;
-
             case R.id.tv_mTvDelivery:
-
                 DeliveryDetailsFragment deliveryDetailsFragment = new DeliveryDetailsFragment();
                 FragmentTransaction ftss = getFragmentManager().beginTransaction();
                 ftss.add(R.id.context_panel, deliveryDetailsFragment, "header").addToBackStack(null).commit();
@@ -269,7 +268,7 @@ public class CreateLogin extends AppCompatActivity implements OnClickListener, R
                 keyboardhidden();
                 break;
             case R.id.tv_mTvStatus:
-                Status_delivery status_delivery = new Status_delivery();
+                Out_For_Delivery status_delivery = new Out_For_Delivery();
                 FragmentTransaction fts1 = getFragmentManager().beginTransaction();
                 fts1.add(R.id.context_panel, status_delivery, "header").addToBackStack(null).commit();
                 visible_invisible(3);

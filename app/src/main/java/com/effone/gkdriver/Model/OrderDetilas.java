@@ -5,80 +5,113 @@ package com.effone.gkdriver.Model;
  */
 
 public class OrderDetilas {
-    private String DateofDelivery;
-    private String ItemName;
-    private String Time;
-    private String Address;
-    private String Address2;
-    private String Name;
+    private String status;
+    private String dateofDelivery;
+    private String itemName;
+    private String time;
+    private String address;
+    private String address2;
+    private String name;
+    private String phone;
+    private int order_id;
+    private int driver_id;
 
-    public OrderDetilas(String dateofDelivery, String time, String itemName, String address, String address2, String name, String phone) {
-        DateofDelivery = dateofDelivery;
-        ItemName = itemName;
-        Time = time;
-        Address = address;
-        Address2 = address2;
-        Name = name;
-        Phone = phone;
+    public OrderDetilas() {
+
     }
 
-    private String Phone;
+    public int getOrder_id() {
+        return order_id;
+    }
+
+    public void setOrder_id(int order_id) {
+        this.order_id = order_id;
+    }
+
+    public int getDriver_id() {
+        return driver_id;
+    }
+
+    public void setDriver_id(int driver_id) {
+        this.driver_id = driver_id;
+    }
+
+
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public String getDateofDelivery() {
-        return DateofDelivery;
+        return dateofDelivery;
     }
 
     public void setDateofDelivery(String dateofDelivery) {
-        DateofDelivery = dateofDelivery;
+        this.dateofDelivery = dateofDelivery;
     }
 
     public String getItemName() {
-        return ItemName;
+        return itemName;
     }
 
     public void setItemName(String itemName) {
-        ItemName = itemName;
+        this.itemName = itemName;
     }
 
     public String getTime() {
-        return Time;
+        return time;
     }
 
     public void setTime(String time) {
-        Time = time;
+        this.time = time;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public String getAddress2() {
-        return Address2;
+        return address2;
     }
 
     public void setAddress2(String address2) {
-        Address2 = address2;
+        this.address2 = address2;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
-
+    public OrderDetilas(int order_id, int driver_id, String status, String dateofDelivery, String time, String itemName, String address, String address2, String name, String phone) {
+        this.order_id = order_id;
+        this.driver_id = driver_id;
+        this.status = status;
+        this.dateofDelivery = dateofDelivery;
+        this.itemName = itemName;
+        this.time = time;
+        this.address = address;
+        this.address2 = address2;
+        this.name = name;
+        this.phone = phone;
+    }
 }

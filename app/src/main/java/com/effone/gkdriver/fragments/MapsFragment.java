@@ -124,7 +124,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
         myMap.setOnPolygonClickListener(new GoogleMap.OnPolygonClickListener() {
             public void onPolygonClick(Polygon polygon) {
                 int selectedId = radioGroup.getCheckedRadioButtonId();
-                if(selectedId != 0){
+                if(selectedId != -1){
 
                     RadioButton radioButton = (RadioButton) radioGroup.findViewById(selectedId);
 
@@ -132,7 +132,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
                         Toast.makeText(getActivity(), "" + polygon.getPoints().get(4), Toast.LENGTH_LONG).show();
 
                 }else {
-                    GKDriver.createOKAlert(getActivity(), getString(R.string.confimation), "Please kindly set Availablity");
+                    GKDriver.createOKAlert(getActivity(), getString(R.string.confimation), getString(R.string.msg_avilabilty));
                 }
             }
         });

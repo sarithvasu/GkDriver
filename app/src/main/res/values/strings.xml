@@ -35,7 +35,7 @@
     <string name="Delivery">Delivery</string>
     <string name="Status">Status</string>
     <string name="orderHistory">History</string>
-
+    <string name="status_out_delivery">Status: Out for Delivery</string>
 
     <string name="Deilvery">Delivery Status</string>
     <string name="details">Delivery Details</string>
@@ -105,6 +105,11 @@
     <string name="err_msg_password_char">Enter atleast one char</string>
     <string name="err_msg_password_digit">Enter atleast one digit </string>
     <string name="err_msg_password_length">password should contain atleast 8 or more alphanumberic.</string>
+    <string name="deleteAll">Delete All</string>
 
+
+    <string name="msg_commment">Please kindly Add Comments</string>
+    <string name="msg_avilabilty">Please kindly set Availablity</string>
+    <string name="msg_delivery">Please kindly set  Delivery Status</string>
 
 </resources>

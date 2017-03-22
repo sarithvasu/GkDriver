@@ -11,6 +11,7 @@ public class OrderHistory {
     private String address;
     private String phone_number;
     private String status;
+    private String Salad;
 
     public int getOrder_id() {
         return order_id;
