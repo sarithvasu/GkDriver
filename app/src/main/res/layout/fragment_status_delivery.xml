@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/background_deliver"
     android:clickable="true"
     tools:context="com.effone.gkdriver.fragments.Status_delivery">
 
@@ -100,6 +100,7 @@
                 android:lines="8"
                 android:maxHeight="150dp"
                 android:maxLength="500"
+                android:imeOptions="flagNoExtractUi"
                 android:maxLines="6"
                 android:overScrollMode="always"
                 android:padding="5dp"

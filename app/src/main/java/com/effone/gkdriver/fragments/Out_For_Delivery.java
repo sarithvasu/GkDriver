@@ -68,7 +68,7 @@ public class Out_For_Delivery extends Fragment implements AdapterView.OnItemClic
         orderDetails.add(new OrderDetilas(12,5,"Delivery", "11-Feb-2017", "@ 5.28 PM", "Ambrosia salad", "#1-42 Farmhouse", "Marshfield,MA 02050,USA", "Mr.Jeff  ", "(877) 304-4493"));
 
         insertDbHelper.insertIntoOrderHistory(orderDetails);
-        OrderHistoryItems orderHistoryItems = new OrderHistoryItems(getActivity(), R.layout.order_list_item, selectDbHelper.orderList("Out_for_delivery"));
+        OrderHistoryItems orderHistoryItems = new OrderHistoryItems(getActivity(), R.layout.order_list_item, selectDbHelper.orderList("Out_for_delivery"),1);
         mListView.setAdapter(orderHistoryItems);
         mListView.setOnItemClickListener(this);
     }

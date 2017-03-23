@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.effone.gkdriver.Model.OrderDetilas;
@@ -20,12 +21,13 @@ import java.util.List;
 public class OrderHistoryItems  extends ArrayAdapter<OrderDetilas> {
     private ArrayList<OrderDetilas> values;
     private LayoutInflater inflater;
-
-    public OrderHistoryItems(Context context, int resource, List<OrderDetilas> values) {
+    int id;
+    public OrderHistoryItems(Context context, int resource, List<OrderDetilas> values, int id) {
         super(context, resource, values);
         this.values =(ArrayList<OrderDetilas>) values;
         inflater = (LayoutInflater)context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        this.id=id;
     }
 
     @Override
@@ -36,6 +38,7 @@ public class OrderHistoryItems  extends ArrayAdapter<OrderDetilas> {
         if(convertView==null){
             vi = inflater.inflate(R.layout.order_list_item, null);
             holder = new FilterViewHolder();
+            holder.imageSend=(ImageView)vi.findViewById(R.id.imv_send);
             holder.date = (TextView) vi.findViewById(R.id.tv_date_time);
             holder.saladname = (TextView ) vi.findViewById(R.id.tv_salad_name);
             holder.address = (TextView ) vi.findViewById(R.id.tv_address1);
@@ -55,7 +58,9 @@ public class OrderHistoryItems  extends ArrayAdapter<OrderDetilas> {
             OrderDetilas value = (OrderDetilas) values.get(position);
 
             /************  Set Model values in Holder elements ***********/
-
+            if(id==1){
+                holder.imageSend.setVisibility(View.VISIBLE);
+            }
             holder.date.setText(value.getStatus());
             holder.saladname.setText(value.getItemName());
             holder.address.setText(value.getAddress());
@@ -73,6 +78,7 @@ public class OrderHistoryItems  extends ArrayAdapter<OrderDetilas> {
 
     }
     public static  class FilterViewHolder {
+        ImageView imageSend;
        TextView date,saladname,address,addreess1,name;
 
     }

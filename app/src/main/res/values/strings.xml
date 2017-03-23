@@ -31,7 +31,7 @@
     <string name="reset">Reset Password</string>
     <string name="forgotPasswords">Forgot Password</string>
 
-    <string name="Availablity">Availablity</string>
+    <string name="Availablity">Availability</string>
     <string name="Delivery">Delivery</string>
     <string name="Status">Status</string>
     <string name="orderHistory">History</string>
@@ -40,8 +40,7 @@
     <string name="Deilvery">Delivery Status</string>
     <string name="details">Delivery Details</string>
     <string name="order">Order History</string>
-    <string name="availbility">Availbility</string>
-    <string name="setavailbility">Set Availablity</string>
+    <string name="setavailbility">Set Availability</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="setStatus">Delivery status</string>

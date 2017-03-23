@@ -12,6 +12,8 @@ import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -46,7 +48,7 @@ import static com.effone.gkdriver.R.string.login;
 public class CreateLogin extends AppCompatActivity implements OnClickListener, Response.Listener<String>, Response.ErrorListener {
     private static final String TAG = "CreateLogin";
     private AppPreferences appPreferences;
-    TextView mTvAvailablity, mTvOrder, mTvDelivery, mTvStatus, mTvLogin, mTvEmail;
+    TextView mTvAvailablity, mTvOrder, mTvDelivery, mTvStatus, mTvLogin,mTvLogout, mTvEmail;
     private LocationManager locationManager;
     private DataBaseHelper mDataBaseHelper;
     private InsertDbHelper mInsertDbHelper;
@@ -72,11 +74,15 @@ public class CreateLogin extends AppCompatActivity implements OnClickListener, R
         if (appPreferences.getUserName().equals("")) {
             showLoginScreen();
 
-            mTvLogin.setText(getString(login));
+            //mTvLogin.setText(getString(login));
+            mTvLogout.setVisibility(View.GONE);
+            mTvLogin.setVisibility(View.VISIBLE);
             mTvEmail.setVisibility(View.GONE);
 
         } else {
-            mTvLogin.setText(getString(R.string.logout));
+            mTvLogout.setText(getString(R.string.logout));
+            mTvLogout.setVisibility(View.VISIBLE);
+            mTvLogin.setVisibility(View.GONE);
             mTvEmail.setText(appPreferences.getUserName());
             mTvEmail.setVisibility(View.VISIBLE);
         }
@@ -98,7 +104,9 @@ public class CreateLogin extends AppCompatActivity implements OnClickListener, R
         mTvOrder = (TextView) findViewById(R.id.tv_mTvOrder);
         mTvDelivery = (TextView) findViewById(R.id.tv_mTvDelivery);
         mTvStatus = (TextView) findViewById(R.id.tv_mTvStatus);
-        mTvLogin = (TextView) findViewById(R.id.tv_logout);
+        mTvLogout = (TextView) findViewById(R.id.tv_logout);
+        mTvLogout.setOnClickListener(this);
+        mTvLogin= (TextView) findViewById(R.id.tv_login);
         mTvLogin.setOnClickListener(this);
         mTvEmail = (TextView) findViewById(R.id.tv_email_id);
 
@@ -115,11 +123,14 @@ public class CreateLogin extends AppCompatActivity implements OnClickListener, R
 
     private void showLoginScreen() {
         final Validation validation = new Validation();
+
         final Dialog login = new Dialog(this);
         login.setCancelable(false);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_MODE_CHANGED);
 // Set GUI of login screen
+        login.requestWindowFeature(Window.FEATURE_NO_TITLE);
         login.setContentView(R.layout.activity_create_login);
-        login.setTitle(getString(R.string.login));
+
         final EditText mEtEmail, mEtPassword;
         TextView mBtLogin, mTvResetPassword, mTvCancel, mTvForgotPassword;
         mEtEmail = (EditText) login.findViewById(R.id.et_email);
@@ -135,13 +146,14 @@ public class CreateLogin extends AppCompatActivity implements OnClickListener, R
         mTvResetPassword.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                login.cancel();
+
                 ResetPasswordFragment resetPasswordFragment = new ResetPasswordFragment();
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.add(R.id.context_panel, resetPasswordFragment, "header").addToBackStack(null).commit();
-
+                ft.replace(R.id.context_panel, resetPasswordFragment, "header").addToBackStack(null).commit();
+                login.cancel();
                 visible_invisible(5);
                 keyboardhidden();
+
 
             }
         });
@@ -244,13 +256,18 @@ public class CreateLogin extends AppCompatActivity implements OnClickListener, R
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_logout:
-                if (appPreferences.getUserName().equals("")) {
-                    showLoginScreen();
-                } else {
-                    logoutAlert();
-                }
 
-                keyboardhidden();
+                    logoutAlert();
+
+
+
+                break;
+            case R.id.tv_login:
+
+                    showLoginScreen();
+
+
+
 
                 break;
             case R.id.tv_mTvAvailablity:
@@ -339,6 +356,8 @@ public class CreateLogin extends AppCompatActivity implements OnClickListener, R
                         mTvLogin.setText(R.string.login);
                         mTvEmail.setText(appPreferences.getUserName());
                         mTvEmail.setVisibility(View.GONE);
+                        mTvLogout.setVisibility(View.GONE);
+                        mTvLogin.setVisibility(View.VISIBLE);
                     }
 
                 })

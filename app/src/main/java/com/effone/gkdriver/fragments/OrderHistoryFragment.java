@@ -39,7 +39,7 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
         mListView = (ListView) root.findViewById(R.id.list_item);
         mImgMenuIcon=(ImageView)root.findViewById(R.id.img_menu);
         mImgMenuIcon.setOnClickListener(this);
-        OrderHistoryItems orderHistoryItems = new OrderHistoryItems(getActivity(), R.layout.order_list_item,mSelectDbHelper.orderList("HISTOR") );
+        OrderHistoryItems orderHistoryItems = new OrderHistoryItems(getActivity(), R.layout.order_list_item,mSelectDbHelper.orderList("HISTOR"), 2);
         mListView.setAdapter(orderHistoryItems);
     }
 
@@ -56,16 +56,16 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
                 Toast.makeText(getActivity(),"You Clicked : " + item.getTitle(),Toast.LENGTH_SHORT).show();
                 switch (item.getItemId()){
                     case R.id.menu_delivery:
-                     orderHistoryItems = new OrderHistoryItems(getActivity(), R.layout.order_list_item,mSelectDbHelper.orderList("HISTOR") );
+                     orderHistoryItems = new OrderHistoryItems(getActivity(), R.layout.order_list_item,mSelectDbHelper.orderList("HISTOR"), 2);
                         mListView.setAdapter(orderHistoryItems);
                         break;
                     case R.id.menu_cancel:
-                       orderHistoryItems = new OrderHistoryItems(getActivity(), R.layout.order_list_item,mSelectDbHelper.orderList("Canceled") );
+                       orderHistoryItems = new OrderHistoryItems(getActivity(), R.layout.order_list_item,mSelectDbHelper.orderList("Canceled"), 2);
                         mListView.setAdapter(orderHistoryItems);
                         break;
                     case R.id.menu_delete:
                         mSelectDbHelper.deleteAll();
-                        orderHistoryItems = new OrderHistoryItems(getActivity(), R.layout.order_list_item,mSelectDbHelper.orderList("Canceled") );
+                        orderHistoryItems = new OrderHistoryItems(getActivity(), R.layout.order_list_item,mSelectDbHelper.orderList("Canceled"), 2);
                         mListView.setAdapter(orderHistoryItems);
                         break;
 

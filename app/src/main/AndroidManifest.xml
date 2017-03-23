@@ -27,7 +27,8 @@
         <activity android:name=".Activity.CreateLogin"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="sensorPortrait"
-            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden">
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

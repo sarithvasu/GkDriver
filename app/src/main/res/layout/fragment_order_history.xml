@@ -27,18 +27,20 @@
         android:layout_below="@+id/delivery_status"/>
 
         <ImageView
+            android:id="@+id/img_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_more_vert_black_24dp"
-            style="@style/HeaderMain"
+
             android:layout_alignBottom="@+id/line1"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:id="@+id/img_menu"/>
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_more_vert_black_24dp" />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/line1"
-        android:id="@+id/list_item"></ListView>
+        android:id="@+id/list_item"
+        android:background="@color/background_deliver"></ListView>
     </RelativeLayout>
 </FrameLayout>

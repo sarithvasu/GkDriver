@@ -28,8 +28,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.46"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="@string/app_name"
+            android:layout_marginBottom="5dp"
             android:textColor="@color/polygone"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -40,18 +41,32 @@
             android:layout_gravity="right"
             android:layout_weight=".5"
             android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="right"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0.56"
+                android:gravity="center_vertical|right"
+                android:text="@string/login"
+
+                android:textColor="@color/polygone"
+                android:textSize="14sp"
+                 />
 
             <TextView
                 android:id="@+id/tv_logout"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="right"
-                android:layout_weight="0.56"
+                android:layout_weight="0.5"
                 android:gravity="right|bottom"
                 android:text="sumant"
+                android:visibility="gone"
                 android:textColor="@color/polygone"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="14sp"
+                />
 
             <TextView
                 android:id="@+id/tv_email_id"
@@ -59,9 +74,10 @@
                 android:layout_height="0dp"
                 android:layout_gravity="right"
                 android:gravity="right"
-                android:layout_marginBottom="5dp"
+
                 android:layout_weight=".5"
-                android:visibility="gone"/>
+               android:visibility="gone"
+               />
         </LinearLayout>
     </LinearLayout>
 

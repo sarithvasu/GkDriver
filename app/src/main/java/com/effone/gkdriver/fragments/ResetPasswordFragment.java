@@ -12,6 +12,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -44,11 +47,13 @@ public class ResetPasswordFragment extends Fragment implements View.OnClickListe
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_reset_password, container, false);
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         mGson = new Gson();
         mQueue = Volley.newRequestQueue(getActivity());
         mAppPreferences = new AppPreferences(getActivity());
         init(view);
-        Util.StringRequestVolley(getActivity(),Request.Method.GET,"dsdd",this,null,null);
+
+        //Util.StringRequestVolley(getActivity(),Request.Method.GET,"dsdd",this,null,null);
         return view;
     }
 
